@@ -210,3 +210,14 @@ input[type="text"] {
   letter-spacing: 0.1em;
   font-size: 0.8em;
 }
+#github {
+  margin-left: 4.3rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #cbdddd;
+  font-weight: 200;
+  font-size: 1em;
+}
+#github:hover {
+  color: #e59f83;
+}
