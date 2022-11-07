@@ -4,7 +4,194 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>is it sunny?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <h1 class="greeting">
+            Good morning, <span class="bold" id="current-city">Lisbon</span>!
+          </h1>
+          <h3 id="weekday-greet">
+            Have a nice <span id="weekday">Monday</span>
+          </h3>
+          <div class="today">
+            <img src="icons/cloudy.svg" class="today-icon" />
+            <h3 id="current-day">Monday</h3>
+            <p class="current-temp">
+              <span id="current-temp"> 15</span><span id="celcius"> °C</span
+              ><span id="division"> | </span><span id="farenheit">°F</span>
+            </p>
+            <h3 class="light" id="current-weather">cloudy</h3>
+            <div id="moreinfo">
+              <div class="row" id="top-info">
+                <div class="col-4" id="max-min">
+                  <p class="label">
+                    <span id="max-temp-label" class="orange light">MAX </span
+                    ><span id="min-temp-label">MIN</span>
+                  </p>
+                </div>
+                <div class="col-4" id="wind-label">
+                  <p class="label light">WIND</p>
+                </div>
+                <div class="col-4" id="precipitation">
+                  <p class="label light">SKY</p>
+                </div>
+              </div>
+              <div class="row" id="bottom-info">
+                <div class="col-4" id="max-min">
+                  <p>
+                    <span class="max-temp" id="max-temp">15 </span
+                    ><span id="min-temp">7</span>
+                  </p>
+                </div>
+                <div class="col-4">
+                  <p>
+                    <span
+                      ><span id="wind">10 </span
+                      ><span class="light">km/h</span></span
+                    >
+                  </p>
+                </div>
+                <div class="col-4" id="precipitation">
+                  <p>
+                    <span id="sky">0</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form id="new-city">
+            <div class="row search-row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  placeholder="Where are you?"
+                  class="search"
+                  id="city-input"
+                />
+              </div>
+              <div class="col justify-content-end">
+                <button type="submit" value="CHANGE CITY" id="change-city">
+                  CHANGE CITY
+                </button>
+              </div>
+              <p id="currentgeo">
+                <span id="current-location">CURRENT LOCATION</span>
+              </p>
+            </div>
+          </form>
+          <h2>Get ready for the next 5 days</h2>
+          <div class="row" id="3days">
+            <div class="row">
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+            </div>
+
+            <div class="row" id="weekdays1">
+              <div class="col-4 weekdays">
+                <p class="label" id="day2">Tuesday</p>
+              </div>
+              <div class="col-4 weekdays">
+                <p class="label" id="day3">Wednesday</p>
+              </div>
+              <div class="col-4 weekdays">
+                <p class="label" id="day4">Thursday</p>
+              </div>
+            </div>
+            <div class="row" id="weektemp1">
+              <div class="col-4 weektemp">
+                <p class="label" id="temp2">16°C</p>
+              </div>
+              <div class="col-4 weektemp">
+                <p class="label" id="temp3">21°C</p>
+              </div>
+              <div class="col-4 weektemp">
+                <p class="label" id="temp4">27°C</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="6days">
+            <div class="row">
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+              <div class="col-4 weather-icons">
+                <img src="icons/sunny.svg" />
+              </div>
+            </div>
+
+            <div class="row" id="weekdays2">
+              <div class="col-4 weekdays">
+                <p class="label" id="day5">Friday</p>
+              </div>
+              <div class="col-4 weekdays">
+                <p class="label" id="day6">Saturday</p>
+              </div>
+              <div class="col-4 weekdays">
+                <p class="label" id="day7">Sunday</p>
+              </div>
+            </div>
+            <div class="row" id="weektemp1">
+              <div class="col-4 weektemp">
+                <p class="label" id="temp5">12°C</p>
+              </div>
+              <div class="col-4 weektemp">
+                <p class="label" id="temp6">26°C</p>
+              </div>
+              <div class="col-4 weektemp">
+                <p class="label" id="temp7">17°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-1 light-switch">
+          <a id="light-switch"
+            ><img id="light-mode" src="icons/light-mode.svg"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
