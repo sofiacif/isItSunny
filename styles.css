@@ -11,7 +11,6 @@
     margin-left: 15%;
   }
   h2 {
-    font-weight: 500;
     font-size: 30px;
     line-height: 44px;
     letter-spacing: 0.05em;
@@ -36,6 +35,21 @@
   .greeting {
     margin-top: 20% !important;
     margin-left: 20%;
+  }
+}
+@media (max-width: 768px) and (min-width: 0px) {
+  #github {
+    bottom: -100% !important;
+  }
+  .greeting {
+    margin-top: 10% !important;
+    margin-left: 0% !important;
+    text-align: center;
+  }
+  h3 {
+    margin-left: 0 !important;
+    text-align: center;
+    padding: 0;
   }
 }
 
@@ -254,12 +268,13 @@ input[type="text"] {
   font-size: 0.8em;
 }
 #github {
-  margin-left: 4.3rem;
-  margin-top: 1.5rem;
   text-decoration: none;
   color: var(--gray);
   font-weight: 200;
   font-size: 1em;
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
 }
 #github:hover {
   color: var(--orange);
