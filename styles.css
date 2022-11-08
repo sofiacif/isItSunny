@@ -1,15 +1,70 @@
+:root {
+  --orange: #e59f83;
+  --gray: #ccdddd;
+  --blue: #232543;
+}
+@media (max-width: 1199.98px) {
+  .greeting {
+    font-size: 35px;
+    line-height: 35px;
+    margin-top: 15% !important;
+    margin-left: 15%;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    margin-top: 50px !important;
+  }
+
+  #light-mode {
+    position: absolute;
+    top: -3%;
+    right: 0%;
+  }
+  .search-row {
+    margin-top: 30% !important;
+  }
+}
+@media (min-width: 765px) and (max-width: 1201px) {
+  #light-mode {
+    position: absolute;
+    top: -9%;
+    right: -6%;
+  }
+  .greeting {
+    margin-top: 20% !important;
+    margin-left: 20%;
+  }
+}
+@media (max-width: 768px) and (min-width: 0px) {
+  #github {
+    bottom: -100% !important;
+  }
+  .greeting {
+    margin-top: 10% !important;
+    margin-left: 0% !important;
+    text-align: center;
+  }
+  h3 {
+    margin-left: 0 !important;
+    text-align: center;
+    padding: 0;
+  }
+}
+
 body {
-  background-color: #232543 !important;
+  background-color: var(--blue) !important;
   font-family: "Inter";
   font-style: normal;
 }
+
 .greeting {
   font-weight: 400;
-  font-size: 40px;
   line-height: 48px;
-  color: #e59f83;
-  margin-top: 100px;
-  margin-left: 70px;
+  color: var(--orange);
+  margin-top: 15%;
+  margin-left: 15%;
 }
 .bold {
   font-weight: 700;
@@ -19,18 +74,20 @@ body {
   font-weight: 500;
 }
 #weekday-greet {
-  margin-left: 70px;
+  margin-left: 15%;
   font-weight: 300;
 }
 
 h1 {
+  font-size: 40px;
   letter-spacing: 0.02em;
+  line-height: 48px;
 }
 h2 {
   font-weight: 500;
   font-size: 36px;
   line-height: 44px;
-  color: #e59f83 !important;
+  color: var(--orange) !important;
   letter-spacing: 0.05em;
   margin-top: 50px !important;
 }
@@ -39,7 +96,7 @@ h3 {
   font-weight: 300;
   font-size: 32px;
   line-height: 39px;
-  color: #ccdddd !important;
+  color: var(--gray) !important;
   letter-spacing: 0.05em;
 }
 #current-day {
@@ -58,7 +115,7 @@ h3 {
   font-weight: 600;
   font-size: 64px;
   line-height: 77px;
-  color: #e59f83;
+  color: var(--orange);
 }
 .light {
   font-weight: lighter;
@@ -70,7 +127,7 @@ h3 {
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #e59f83;
+  color: var(--orange);
 }
 
 #moreinfo {
@@ -78,14 +135,14 @@ h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
-  color: #cbdddd;
+  color: var(--gray);
 }
 .orange {
-  color: #e59f83 !important;
+  color: var(--orange) !important;
 }
 
 .grey {
-  color: #cbdddd !important;
+  color: var(--gray) !important;
 }
 .label {
   font-size: 15px;
@@ -103,21 +160,21 @@ h3 {
   margin-top: 100px;
   margin-right: 70px;
 }
-.light-switch ::hover {
-  filter: invert(95%) sepia(10%) saturate(240%) hue-rotate(131deg)
-    brightness(91%) contrast(91%);
-  cursor: pointer;
+#light-mode:hover {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(7%) saturate(377%)
+    hue-rotate(126deg) brightness(90%) contrast(91%);
+  cursor: pointer !important;
 }
 
 .search {
   width: 100%;
   background: transparent;
-  border: 2px solid #cbdddd;
+  border: 2px solid var(--gray);
   border-radius: 4px;
   max-height: 58px;
 }
 .search-row {
-  margin-top: 180px !important;
+  margin-top: 15%;
 }
 ::placeholder {
   font-weight: 200;
@@ -130,7 +187,7 @@ input {
   padding: 15px;
 }
 input[type="text"] {
-  color: #cbdddd;
+  color: var(--gray);
 }
 
 #change-city {
@@ -143,7 +200,7 @@ input[type="text"] {
   border-radius: 500px;
   transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: 0.3s;
-  border: 2px solid #cbdddd;
+  border: 2px solid var(--gray);
   letter-spacing: 2px;
   min-width: 160px;
   text-transform: uppercase;
@@ -151,13 +208,13 @@ input[type="text"] {
   font-weight: 700;
   text-align: center;
   padding: 15px;
-  color: #cbdddd;
+  color: var(--gray);
   height: 58px;
   background-color: transparent;
 }
 #change-city:hover {
-  color: #232543;
-  background-color: #cbdddd;
+  color: var(--blue);
+  background-color: var(--gray);
   border: 0px;
 }
 .weather-icons {
@@ -174,7 +231,7 @@ input[type="text"] {
   line-height: 29px;
   text-align: center;
   letter-spacing: 0.08em;
-  color: #cbdddd !important;
+  color: var(--gray) !important;
 }
 
 .weektemp {
@@ -182,12 +239,12 @@ input[type="text"] {
   font-size: 24px;
   line-height: 29px;
   text-align: center;
-  color: #e59f83;
+  color: var(--orange);
   margin-top: -18px !important;
 }
 #farenheit,
 #celcius {
-  color: #e59f83;
+  color: var(--orange);
   font-weight: 200;
   cursor: pointer;
   font-size: 0.3em;
@@ -203,7 +260,7 @@ input[type="text"] {
   margin-top: 5px;
 }
 #current-location {
-  color: #e59f83;
+  color: var(--orange);
   padding-bottom: 1.5px;
   border-bottom: 1.2px solid;
   font-weight: 600;
@@ -211,13 +268,14 @@ input[type="text"] {
   font-size: 0.8em;
 }
 #github {
-  margin-left: 4.3rem;
-  margin-top: 1.5rem;
   text-decoration: none;
-  color: #cbdddd;
+  color: var(--gray);
   font-weight: 200;
   font-size: 1em;
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
 }
 #github:hover {
-  color: #e59f83;
+  color: var(--orange);
 }
