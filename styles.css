@@ -7,8 +7,8 @@
   .greeting {
     font-size: 35px;
     line-height: 35px;
-    margin-top: 70px !important;
-    margin-left: 70px;
+    margin-top: 15% !important;
+    margin-left: 15%;
   }
   h2 {
     font-weight: 500;
@@ -17,7 +17,25 @@
     letter-spacing: 0.05em;
     margin-top: 50px !important;
   }
-  #light-switch {
+
+  #light-mode {
+    position: absolute;
+    top: -3%;
+    right: 0%;
+  }
+  .search-row {
+    margin-top: 30% !important;
+  }
+}
+@media (min-width: 765px) and (max-width: 1201px) {
+  #light-mode {
+    position: absolute;
+    top: -9%;
+    right: -6%;
+  }
+  .greeting {
+    margin-top: 20% !important;
+    margin-left: 20%;
   }
 }
 
@@ -26,12 +44,13 @@ body {
   font-family: "Inter";
   font-style: normal;
 }
+
 .greeting {
   font-weight: 400;
   line-height: 48px;
   color: var(--orange);
-  margin-top: 100px;
-  margin-left: 70px;
+  margin-top: 15%;
+  margin-left: 15%;
 }
 .bold {
   font-weight: 700;
@@ -41,7 +60,7 @@ body {
   font-weight: 500;
 }
 #weekday-greet {
-  margin-left: 70px;
+  margin-left: 15%;
   font-weight: 300;
 }
 
@@ -141,7 +160,7 @@ h3 {
   max-height: 58px;
 }
 .search-row {
-  margin-top: 180px !important;
+  margin-top: 15%;
 }
 ::placeholder {
   font-weight: 200;
