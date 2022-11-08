@@ -7,16 +7,17 @@
   .greeting {
     font-size: 35px;
     line-height: 35px;
-    margin-top: 70px;
+    margin-top: 70px !important;
     margin-left: 70px;
   }
   h2 {
     font-weight: 500;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 44px;
-    color: var(--orange) !important;
     letter-spacing: 0.05em;
     margin-top: 50px !important;
+  }
+  #light-switch {
   }
 }
 
@@ -126,10 +127,10 @@ h3 {
   margin-top: 100px;
   margin-right: 70px;
 }
-.light-switch ::hover {
-  filter: invert(95%) sepia(10%) saturate(240%) hue-rotate(131deg)
-    brightness(91%) contrast(91%);
-  cursor: pointer;
+#light-mode:hover {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(7%) saturate(377%)
+    hue-rotate(126deg) brightness(90%) contrast(91%);
+  cursor: pointer !important;
 }
 
 .search {
