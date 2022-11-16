@@ -18,17 +18,24 @@
     margin-top: 50px !important;
   }
 
+  #light-mode {
+    position: absolute;
+    top: -3%;
+    right: 0%;
+  }
   .search-row {
     margin-top: 30% !important;
   }
 }
-@media (min-width: 769px) and (max-width: 1201px) {
+@media (min-width: 765px) and (max-width: 1201px) {
+  #light-mode {
+    position: absolute;
+    top: -9%;
+    right: -6%;
+  }
   .greeting {
     margin-top: 20% !important;
     margin-left: 20%;
-  }
-  .search-row {
-    margin-top: 20% !important;
   }
 }
 @media (max-width: 768px) and (min-width: 0px) {
@@ -36,7 +43,7 @@
     bottom: -100% !important;
   }
   .greeting {
-    margin-top: 15% !important;
+    margin-top: 10% !important;
     margin-left: 0% !important;
     text-align: center;
   }
@@ -44,21 +51,6 @@
     margin-left: 0 !important;
     text-align: center;
     padding: 0;
-  }
-  #city-input {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    justify-content: center !important;
-  }
-  #change-city {
-    margin: 0 auto;
-    margin-top: 20px;
-    text-align: center;
-    justify-content: center !important;
-  }
-  #search-row {
-    margin: 0 auto !important;
   }
 }
 
@@ -164,10 +156,10 @@ h3 {
 .light-switch {
   text-align: right;
 }
+
 #light-mode {
-  position: absolute;
-  top: 2% !important;
-  right: 2%;
+  margin-top: 100px;
+  margin-right: 70px;
 }
 #light-mode:hover {
   filter: brightness(0) saturate(100%) invert(97%) sepia(7%) saturate(377%)
