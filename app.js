@@ -1,4 +1,4 @@
-let apiKey = `f81614abe2395d5dfecd45b9298041de`;
+let apiKey = `00bfe09c6fd36ft82e7e4a384o4ba0e8`;
 //change week day
 let now = new Date();
 let weekDays = [
@@ -49,7 +49,7 @@ function changeCurrentGeo() {
     console.log(position.coords.longitude);
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let currentWeather = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    let currentWeather = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
 
     function changeLocation(response) {
       let geoCity = response.data.name;
@@ -126,14 +126,14 @@ function changeTempSearch(event) {
   event.preventDefault();
   let citySearch = cityInput.value.trim();
   citySearch = citySearch.toLowerCase();
-  let cityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${citySearch}&units=metric&appid=${apiKey}`;
+  let cityUrl = `api.shecodes.io/weather/v1/current?query=${citySearch}&key=${apiKey}&units=metric`;
 
-  function changeCityTemp(response) {
-    currentCity.textContent = response.data.name;
+  https: function changeCityTemp(response) {
+    currentCity.textContent = response.city;
   }
   axios.get(cityUrl).then(changeCityTemp);
   function changeTemperature(response) {
-    let geoTemp = Math.round(response.data.main.temp);
+    let geoTemp = Math.round(response.data.temperature.current);
     currentTemp.textContent = geoTemp;
     let farenheit = document.querySelector("#farenheit");
     let celcius = document.querySelector("#celcius");
