@@ -40,7 +40,7 @@ console.log(day, month);
 currentDate.innerHTML = `${day} ${month}`;
 
 let currentCity = document.querySelector("#current-city"); //Good morning, current city
-let currentTemp = document.querySelector("#current-temp");
+let currentTemp = document.querySelector("#current-temp"); // temperature info
 
 //change temperature - Geo Location
 function changeCurrentGeo() {
@@ -49,15 +49,15 @@ function changeCurrentGeo() {
     console.log(position.coords.longitude);
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
-    let currentWeather = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+    let currentWeather = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}`;
 
     function changeLocation(response) {
-      let geoCity = response.data.name;
+      let geoCity = response.data.city;
       currentCity.innerHTML = geoCity;
     }
 
     function changeTemperature(response) {
-      let geoTemp = Math.round(response.data.main.temp);
+      let geoTemp = Math.round(response.data.daily[0].temperature.day);
       currentTemp.textContent = geoTemp;
       let farenheit = document.querySelector("#farenheit");
       let celcius = document.querySelector("#celcius");
@@ -72,7 +72,7 @@ function changeCurrentGeo() {
       console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
       function changeCelcius() {
-        currentTemp.textContent = Math.round(response.data.main.temp);
+        currentTemp.textContent = Math.round(response.data.temperature.current);
       }
 
       celcius.addEventListener("click", changeCelcius);
@@ -80,11 +80,11 @@ function changeCurrentGeo() {
       //change max
       function changeMaxMin(response) {
         let maxTemp = document.querySelector("#max-temp");
-        let geoMax = Math.round(response.data.main.temp_max);
+        let geoMax = Math.round(response.data.daily[0].temperature.maximum);
         maxTemp.textContent = `${geoMax} `;
 
         let minTemp = document.querySelector("#min-temp");
-        let geoMin = Math.round(response.data.main.temp_min);
+        let geoMin = Math.round(response.data.daily[0].temperature.minimum);
         minTemp.textContent = geoMin;
         console.log(
           `Today it is a maximum of ${geoMax}°C and a minimum of ${geoMin}°C`
@@ -95,7 +95,7 @@ function changeCurrentGeo() {
       //change wind
       function changeWind(response) {
         let wind = document.querySelector("#wind");
-        let geoWind = Math.round(response.data.wind.speed);
+        let geoWind = Math.round(response.data.daily[0].wind.speed);
         wind.textContent = `${geoWind} `;
       }
       axios.get(currentWeather).then(changeWind);
@@ -103,11 +103,19 @@ function changeCurrentGeo() {
       //change sky
       function changeSky(response) {
         let sky = document.querySelector("#sky");
-        let geoSky = response.data.weather[0].description;
+        let geoSky = response.data.daily[0].condition.description;
 
         sky.textContent = geoSky;
       }
       axios.get(currentWeather).then(changeSky);
+      //change humidity
+      function changeHumidity(response) {
+        let humidity = document.querySelector("#humidity");
+        let geoHumidity = response.data.daily[0].temperature.humidity;
+
+        humidity.textContent = geoHumidity;
+      }
+      axios.get(currentWeather).then(changeHumidity);
     }
 
     axios.get(currentWeather).then(changeLocation);
@@ -126,14 +134,14 @@ function changeTempSearch(event) {
   event.preventDefault();
   let citySearch = cityInput.value.trim();
   citySearch = citySearch.toLowerCase();
-  let cityUrl = `api.shecodes.io/weather/v1/current?query=${citySearch}&key=${apiKey}&units=metric`;
+  let cityUrl = `https://api.shecodes.io/weather/v1/forecast?query=${citySearch}&key=${apiKey}`;
 
-  https: function changeCityTemp(response) {
-    currentCity.textContent = response.city;
+  function changeCityTemp(response) {
+    currentCity.textContent = response.data.city;
   }
   axios.get(cityUrl).then(changeCityTemp);
   function changeTemperature(response) {
-    let geoTemp = Math.round(response.data.temperature.current);
+    let geoTemp = Math.round(response.data.daily[0].temperature.day);
     currentTemp.textContent = geoTemp;
     let farenheit = document.querySelector("#farenheit");
     let celcius = document.querySelector("#celcius");
@@ -149,7 +157,9 @@ function changeTempSearch(event) {
     console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
     function changeCelcius() {
-      currentTemp.textContent = Math.round(response.data.main.temp);
+      currentTemp.textContent = Math.round(
+        response.data.daily[0].temperature.day
+      );
     }
 
     celcius.addEventListener("click", changeCelcius);
@@ -157,11 +167,11 @@ function changeTempSearch(event) {
     //change max
     function changeMaxMin(response) {
       let maxTemp = document.querySelector("#max-temp");
-      let geoMax = Math.round(response.data.main.temp_max);
+      let geoMax = Math.round(response.data.daily[0].temperature.maximum);
       maxTemp.textContent = `${geoMax} `;
 
       let minTemp = document.querySelector("#min-temp");
-      let geoMin = Math.round(response.data.main.temp_min);
+      let geoMin = Math.round(response.data.daily[0].temperature.minimum);
       minTemp.textContent = geoMin;
       console.log(
         `Today it is a maximum of ${geoMax}°C and a minimum of ${geoMin}°C`
@@ -172,7 +182,8 @@ function changeTempSearch(event) {
     //change wind
     function changeWind(response) {
       let wind = document.querySelector("#wind");
-      let geoWind = Math.round(response.data.wind.speed);
+      let geoWind = Math.round(response.data.daily[0].wind.speed);
+
       wind.textContent = `${geoWind} `;
     }
     axios.get(cityUrl).then(changeWind);
@@ -180,11 +191,19 @@ function changeTempSearch(event) {
     //change sky
     function changeSky(response) {
       let sky = document.querySelector("#sky");
-      let geoSky = response.data.weather[0].description;
+      let geoSky = response.data.daily[0].condition.description;
 
       sky.textContent = geoSky;
     }
     axios.get(cityUrl).then(changeSky);
+    //change humidity
+    function changeHumidity(response) {
+      let humidity = document.querySelector("#humidity");
+      let geoHumidity = response.data.daily[0].temperature.humidity;
+      console.log(geoHumidity);
+      humidity.textContent = geoHumidity;
+    }
+    axios.get(cityUrl).then(changeHumidity);
   }
 
   axios.get(cityUrl).then(changeTemperature);
