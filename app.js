@@ -262,84 +262,179 @@ function changeTempSearch(event) {
       let todayIcon = document.querySelector(".today-icon");
 
       //background colors
-      let clearSkyDay = "#FFF1B0";
-      let clearSkyNight = "0F172A";
-      // clear sky icon
+      let clearBlue = "#B3BFD2"; //highlights blue
+      let orange = "#E6A339"; //highlights orange
+      let clearDay = "#FFFEFA"; // clear sky
+      let clearNight = "#16223F"; // clear night
+      let cloudyDay = "#E7E4DB"; //few clouds day
+      let cloudyNight = "#282E3D"; // few clouds night
+      let scatDay = "#DBDBDB"; // scattered day
+      let scatNight = "#32405F"; // scattered night
+      let brokenDay = "#B7B5B5"; // broken day
+      let brokenNight = "#5D6D92"; // broken night
+      let showerDay = "#C8DDE9"; // shower day
+      let showerNight = "#4A5161";
+      let rainDay = "#97BACE";
+      let rainNight = "#394152";
+      let thunderDay = "#BDBCA4";
+      let thunderNight = "#4E679B";
+      let snowDay = "#E7F3F6";
+      let snowNight = "#727B8E";
+      let mistDay = "#D6E1E4";
+      let mistNight = "#8792AC";
+
+      document.documentElement.style.setProperty(" --orange", orange);
+
+      if (hour < 18) {
+        document.documentElement.style.setProperty(" --gray", cloudyNight);
+      } else {
+        document.documentElement.style.setProperty(" --gray", clearDay);
+      }
+
       if ((geoSky === `clear sky`) & (hour < 18)) {
+        // clear sky icon
         todayIcon.setAttribute("src", "icons/clear-sky-day.svg");
-        document.html.body.style.backgroundColor = clearSkyDay;
+        document.documentElement.style.setProperty(" --blue", clearDay);
+        document.documentElement.style.setProperty(" --orange", orange);
       } else if ((geoSky === `clear sky`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/clear-sky-night.svg");
-        document.html.body.style.backgroundColor = clearSkyNight;
+        //document.html.body.style.backgroundColor = clearNight;
+        document.documentElement.style.setProperty(" --blue", clearNight);
+        document.documentElement.style.setProperty(" --orange", clearBlue);
       }
       // clear sky icon
       if ((geoSky === `sky is clear`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/clear-sky-day.svg");
-        document.body.style.backgroundColor = clearSkyDay;
+        document.documentElement.style.setProperty(" --blue", clearDay);
+        document.documentElement.style.setProperty(" --orange", orange);
       } else if ((geoSky === `sky is clear`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/clear-sky-night.svg");
-        document.html.body.style.backgroundColor = clearSkyNight;
+        document.documentElement.style.setProperty(" --blue", clearNight);
+        document.documentElement.style.setProperty(" --orange", clearBlue);
       }
       // cloudy icon
       if ((geoSky === `few clouds`) & (hour < 18)) {
         todayIcon.setAttribute("src", "/icons/cloudy-day.svg");
+        document.documentElement.style.setProperty(" --blue", cloudyDay);
+        document.documentElement.style.setProperty(" --orange", orange);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/cloudy-night.svg");
+        document.documentElement.style.setProperty(" --blue", cloudyNight);
+        document.documentElement.style.setProperty(" --orange", clearBlue);
       }
       // scattered clouds icon
       if ((geoSky === `scattered clouds`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/scattered-clouds-day.svg");
+        document.documentElement.style.setProperty(" --blue", scatDay);
+        document.documentElement.style.setProperty(" --orange", orange);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/scattered-clouds-night.svg");
+        document.documentElement.style.setProperty(" --blue", scatNight);
+        document.documentElement.style.setProperty(" --orange", clearBlue);
       }
+
       // broken clouds icon
       if ((geoSky === `broken clouds`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/broken-clouds-day.svg");
+        document.documentElement.style.setProperty(" --blue", brokenDay);
+        document.documentElement.style.setProperty(" --orange", orange);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/broken-clouds-night.svg");
+        document.documentElement.style.setProperty(" --blue", brokenNight);
+        document.documentElement.style.setProperty(" --orange", clearNight);
       }
       // showers icon
       if ((geoSky === `showers`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/showers-day.svg");
+        document.documentElement.style.setProperty(" --blue", showerDay);
+        document.documentElement.style.setProperty(" --orange", brokenNight);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/showers-night.svg");
+        document.documentElement.style.setProperty(" --blue", showerNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
       // light rain icon
       if ((geoSky === `light rain`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/showers-day.svg");
-      } else if ((geoSky === `light rain`) & (hour > 18)) {
+        document.documentElement.style.setProperty(" --blue", showerDay);
+        document.documentElement.style.setProperty(" --orange", brokenNight);
+      } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/showers-night.svg");
+        document.documentElement.style.setProperty(" --blue", showerNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
+
       // rain icon
       if ((geoSky === `rain`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/rain-day.svg");
+        document.documentElement.style.setProperty(" --blue", rainDay);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/rain-night.svg");
+        document.documentElement.style.setProperty(" --blue", rainNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
+      }
+
+      // moderate rain
+      if ((geoSky === `moderate rain`) & (hour < 18)) {
+        todayIcon.setAttribute("src", "icons/rain-day.svg");
+        document.documentElement.style.setProperty(" --blue", rainDay);
+        document.documentElement.style.setProperty(" --orange", snowDay);
+      } else if ((geoSky === `few clouds`) & (hour > 18)) {
+        todayIcon.setAttribute("src", "icons/rain-night.svg");
+        document.documentElement.style.setProperty(" --blue", rainNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
 
       // heavy intensity rain icon
       if ((geoSky === `heavy intensity rain`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/rain-day.svg");
+        document.documentElement.style.setProperty(" --blue", rainDay);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/rain-night.svg");
+        document.documentElement.style.setProperty(" --blue", rainNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
       // thunder icon
       if ((geoSky === `thunder`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/thunder-day.svg");
+        document.documentElement.style.setProperty(" --blue", thunderDay);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/thunder-night.svg");
+        document.documentElement.style.setProperty(" --blue", thunderNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
       // snow icon
       if ((geoSky === `snow`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/snow-day.svg");
+        document.documentElement.style.setProperty(" --blue", snowDay);
+        document.documentElement.style.setProperty(" --orange", rainDay);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/snow-night.svg");
+        document.documentElement.style.setProperty(" --blue", snowNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
       // mist icon
       if ((geoSky === `mist`) & (hour < 18)) {
         todayIcon.setAttribute("src", "icons/mist-day.svg");
+        document.documentElement.style.setProperty(" --blue", mistDay);
+        document.documentElement.style.setProperty(" --orange", rainNight);
       } else if ((geoSky === `few clouds`) & (hour > 18)) {
         todayIcon.setAttribute("src", "icons/mist-night.svg");
+        document.documentElement.style.setProperty(" --blue", mistNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
+      }
+      // overcast clouds
+      if ((geoSky === `overcast clouds`) & (hour < 18)) {
+        todayIcon.setAttribute("src", "icons/mist-day.svg");
+        document.documentElement.style.setProperty(" --blue", mistDay);
+        document.documentElement.style.setProperty(" --orange", rainNight);
+      } else if ((geoSky === `few clouds`) & (hour > 18)) {
+        todayIcon.setAttribute("src", "icons/mist-night.svg");
+        document.documentElement.style.setProperty(" --blue", mistNight);
+        document.documentElement.style.setProperty(" --orange", snowDay);
       }
     }
 
