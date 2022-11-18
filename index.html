@@ -33,7 +33,7 @@
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="background-div">
       <div class="row">
         <div class="col-md-5">
           <h1 class="greeting">
@@ -49,7 +49,7 @@
               <span id="current-temp"> 15</span><span id="celcius"> °C</span
               ><span id="division"> | </span><span id="farenheit">°F</span>
             </p>
-            <h3 class="light" id="current-weather">cloudy</h3>
+            <h3 class="light" id="sky">cloudy</h3>
             <div id="moreinfo">
               <div class="row" id="top-info">
                 <div class="col-4" id="max-min">
@@ -61,8 +61,8 @@
                 <div class="col-4" id="wind-label">
                   <p class="label light">WIND</p>
                 </div>
-                <div class="col-4" id="precipitation">
-                  <p class="label light">SKY</p>
+                <div class="col-4" id="humidity_label">
+                  <p class="label light">HUMIDITY</p>
                 </div>
               </div>
               <div class="row" id="bottom-info">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-4">
                   <p>
-                    <span id="sky">0</span>
+                    <span id="humidity">0</span>
                   </p>
                 </div>
               </div>

@@ -2,6 +2,7 @@
   --orange: #e59f83;
   --gray: #ccdddd;
   --blue: #232543;
+  overflow-x: hidden;
 }
 @media (max-width: 1199.98px) {
   .greeting {
@@ -52,9 +53,10 @@
     padding: 0;
   }
 }
-
+html body {
+  background-color: var(--blue);
+}
 body {
-  background-color: var(--blue) !important;
   font-family: "Inter";
   font-style: normal;
 }
@@ -110,6 +112,7 @@ h3 {
   display: block;
   margin: 4rem auto;
   margin-top: 6.5rem;
+  width: 30%;
 }
 .current-temp {
   font-weight: 600;
