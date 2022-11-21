@@ -287,8 +287,12 @@ function changeTempSearch(event) {
       const root = document.querySelector(":root");
       if (hour < 18) {
         root.style.setProperty(" --gray", cloudyNight);
+        //root.style.setProperty(" --orange", orange);
+        //root.style.setProperty(" --blue", clearDay);
       } else {
         root.style.setProperty(" --gray", clearDay);
+        //root.style.setProperty(" --orange", clearBlue);
+        //root.style.setProperty(" --blue", clearNight);
       }
       // clear sky icon
       if ((geoSky === `clear sky`) & (hour < 18)) {
