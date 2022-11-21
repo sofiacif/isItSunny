@@ -1,7 +1,7 @@
 :root {
-  /*--orange: #e59f83;
+  --orange: #e59f83;
   --gray: #ccdddd;
-  --blue: #232543; */
+  --blue: #232543;
   overflow-x: hidden;
 }
 @media (max-width: 1199.98px) {
