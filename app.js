@@ -115,7 +115,7 @@ function changeCurrentGeo() {
         let orangeH = "#E6A339"; //highlights orange
         let clearDay = "#FFFEFA"; // clear sky
         let clearNight = "#16223F"; // clear night
-        let cloudyDay = "#E7E4DB"; //few clouds day
+        let cloudyDay = "#EFEEE7"; //few clouds day
         let cloudyNight = "#282E3D"; // few clouds night
         let scatDay = "#DBDBDB"; // scattered day
         let scatNight = "#32405F"; // scattered night
@@ -134,14 +134,14 @@ function changeCurrentGeo() {
 
         //document.html.body.style.backgroundColor = clearNight;
         const root = document.querySelector(":root");
+        let searchBar = document.querySelector("#city-input");
+
         if (hour < 18) {
           root.style.setProperty("--gray", cloudyNight);
-          //root.style.setProperty("--orange", orange);
-          //root.style.setProperty("--blue", clearDay);
+          searchBar.classList.add("clearNight");
         } else {
           root.style.setProperty("--gray", clearDay);
-          //root.style.setProperty("--orange", clearBlue);
-          //root.style.setProperty("--blue", clearNight);
+          searchBar.classList.add("clearDay");
         }
         // clear sky icon
         if (geoSky === `clear sky` && hour < 18) {
@@ -178,7 +178,7 @@ function changeCurrentGeo() {
         if (geoSky === `scattered clouds` && hour < 18) {
           todayIcon.setAttribute("src", "icons/scattered-clouds-day.svg");
           root.style.setProperty("--blue", scatDay);
-          root.style.setProperty("--orange", orangeH);
+          root.style.setProperty("--orange", scatNight);
         } else if (geoSky === `scattered clouds` && hour > 18) {
           todayIcon.setAttribute("src", "icons/scattered-clouds-night.svg");
           root.style.setProperty("--blue", scatNight);
@@ -189,7 +189,7 @@ function changeCurrentGeo() {
         if (geoSky === `broken clouds` && hour < 18) {
           todayIcon.setAttribute("src", "icons/broken-clouds-day.svg");
           root.style.setProperty("--blue", brokenDay);
-          root.style.setProperty("--orange", orangeH);
+          root.style.setProperty("--orange", clearDay);
         } else if (geoSky === `broken clouds` && hour > 18) {
           todayIcon.setAttribute("src", "icons/broken-clouds-night.svg");
           root.style.setProperty("--blue", brokenNight);
@@ -383,10 +383,10 @@ function changeTempSearch(event) {
 
       //background colors
       let clearBlue = "#B3BFD2"; //highlights blue
-      let orangeH = "#E6A339"; //highlights orange
+      let orangeH = "#ca6800"; //highlights orange
       let clearDay = "#FFFEFA"; // clear sky
       let clearNight = "#16223F"; // clear night
-      let cloudyDay = "#E7E4DB"; //few clouds day
+      let cloudyDay = "#EFEEE7"; //few clouds day
       let cloudyNight = "#282E3D"; // few clouds night
       let scatDay = "#DBDBDB"; // scattered day
       let scatNight = "#32405F"; // scattered night
@@ -405,14 +405,14 @@ function changeTempSearch(event) {
 
       //document.html.body.style.backgroundColor = clearNight;
       const root = document.querySelector(":root");
+      let searchBar = document.querySelector("#city-input");
+
       if (hour < 18) {
         root.style.setProperty("--gray", cloudyNight);
-        //root.style.setProperty("--orange", orange);
-        //root.style.setProperty("--blue", clearDay);
+        searchBar.classList.add("clearNight");
       } else {
         root.style.setProperty("--gray", clearDay);
-        //root.style.setProperty("--orange", clearBlue);
-        //root.style.setProperty("--blue", clearNight);
+        searchBar.classList.add("clearDay");
       }
       // clear sky icon
       if (geoSky === `clear sky` && hour < 18) {
@@ -449,7 +449,7 @@ function changeTempSearch(event) {
       if (geoSky === `scattered clouds` && hour < 18) {
         todayIcon.setAttribute("src", "icons/scattered-clouds-day.svg");
         root.style.setProperty("--blue", scatDay);
-        root.style.setProperty("--orange", orangeH);
+        root.style.setProperty("--orange", scatNight);
       } else if (geoSky === `scattered clouds` && hour > 18) {
         todayIcon.setAttribute("src", "icons/scattered-clouds-night.svg");
         root.style.setProperty("--blue", scatNight);
@@ -460,7 +460,7 @@ function changeTempSearch(event) {
       if (geoSky === `broken clouds` && hour < 18) {
         todayIcon.setAttribute("src", "icons/broken-clouds-day.svg");
         root.style.setProperty("--blue", brokenDay);
-        root.style.setProperty("--orange", orangeH);
+        root.style.setProperty("--orange", clearDay);
       } else if (geoSky === `broken clouds` && hour > 18) {
         todayIcon.setAttribute("src", "icons/broken-clouds-night.svg");
         root.style.setProperty("--blue", brokenNight);

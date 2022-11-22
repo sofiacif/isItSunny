@@ -71,7 +71,12 @@ body {
 .bold {
   font-weight: 700;
 }
-
+.clearNight ::-webkit-input-placeholder {
+  color: #16223f;
+}
+.clearDay ::-webkit-input-placeholder {
+  color: #fffefa;
+}
 #weekday {
   font-weight: 500;
 }
