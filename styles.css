@@ -4,6 +4,7 @@
   --blue: #232543;
   overflow-x: hidden;
 }
+/* desktop */
 @media (max-width: 1199.98px) {
   .greeting {
     font-size: 35px;
@@ -27,6 +28,7 @@
     margin-top: 30% !important;
   }
 }
+/* tablet */
 @media (min-width: 765px) and (max-width: 1201px) {
   #light-mode {
     position: absolute;
@@ -38,6 +40,7 @@
     margin-left: 20%;
   }
 }
+/* mobile */
 @media (max-width: 768px) and (min-width: 0px) {
   #github {
     bottom: -100% !important;
@@ -231,7 +234,8 @@ input[type="text"] {
   display: flex;
   justify-content: center;
 }
-#weekdays1 {
+#weekdays1,
+#weekdays2 {
   margin-top: 20px;
 }
 .weekdays {

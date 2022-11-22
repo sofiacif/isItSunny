@@ -8,7 +8,14 @@ let weekDays = [
   `Wednesday`,
   `Thursday`,
   `Friday`,
+  `Saturday`,
   `Sunday`,
+  `Monday`,
+  `Tuesday`,
+  `Wednesday`,
+  `Thursday`,
+  `Friday`,
+  `Saturday`,
 ];
 
 //change h1
@@ -16,6 +23,21 @@ let weekDay = weekDays[now.getDay()];
 let currentWeekday = document.querySelector("#weekday");
 currentWeekday.innerHTML = weekDay;
 console.log(weekDay);
+
+// forecast weekday labels
+let day2 = document.querySelector("#day2");
+let day3 = document.querySelector("#day3");
+let day4 = document.querySelector("#day4");
+let day5 = document.querySelector("#day5");
+let day6 = document.querySelector("#day6");
+let day7 = document.querySelector("#day7");
+
+day2.innerHTML = weekDays[now.getDay() + 1];
+day3.innerHTML = weekDays[now.getDay() + 2];
+day4.innerHTML = weekDays[now.getDay() + 3];
+day5.innerHTML = weekDays[now.getDay() + 4];
+day6.innerHTML = weekDays[now.getDay() + 5];
+day7.innerHTML = weekDays[now.getDay() + 6];
 
 //change date
 let months = [
@@ -77,28 +99,19 @@ function changeCurrentGeo() {
 
       celcius.addEventListener("click", changeCelcius);
 
-      //change max
-      function changeMaxMin(response) {
-        let maxTemp = document.querySelector("#max-temp");
-        let geoMax = Math.round(response.data.daily[0].temperature.maximum);
-        maxTemp.textContent = `${geoMax} `;
+      //change max and min temp
+      let maxTemp = document.querySelector("#max-temp");
+      let geoMax = Math.round(response.data.daily[0].temperature.maximum);
+      maxTemp.textContent = `${geoMax} `;
 
-        let minTemp = document.querySelector("#min-temp");
-        let geoMin = Math.round(response.data.daily[0].temperature.minimum);
-        minTemp.textContent = geoMin;
-        console.log(
-          `Today it is a maximum of ${geoMax}°C and a minimum of ${geoMin}°C`
-        );
-      }
-      axios.get(currentWeather).then(changeMaxMin);
+      let minTemp = document.querySelector("#min-temp");
+      let geoMin = Math.round(response.data.daily[0].temperature.minimum);
+      minTemp.textContent = geoMin;
 
       //change wind
-      function changeWind(response) {
-        let wind = document.querySelector("#wind");
-        let geoWind = Math.round(response.data.daily[0].wind.speed);
-        wind.textContent = `${geoWind} `;
-      }
-      axios.get(currentWeather).then(changeWind);
+      let wind = document.querySelector("#wind");
+      let geoWind = Math.round(response.data.daily[0].wind.speed);
+      wind.textContent = `${geoWind} `;
 
       //change sky
       function changeSky(response) {
@@ -107,21 +120,35 @@ function changeCurrentGeo() {
         let geoSky = response.data.daily[0].condition.description;
         sky.textContent = geoSky;
 
-        //change icons and background
+        //sky forecast icon info
+        let foreSky2 = response.data.daily[1].condition.description;
+        let foreSky3 = response.data.daily[2].condition.description;
+        let foreSky4 = response.data.daily[3].condition.description;
+        let foreSky5 = response.data.daily[4].condition.description;
+        let foreSky6 = response.data.daily[5].condition.description;
+        let foreSky7 = response.data.daily[6].condition.description;
+
+        //icon variables
         let todayIcon = document.querySelector(".today-icon");
+        let foreIcon2 = document.querySelector("#foreIcon2");
+        let foreIcon3 = document.querySelector("#foreIcon3");
+        let foreIcon4 = document.querySelector("#foreIcon4");
+        let foreIcon5 = document.querySelector("#foreIcon5");
+        let foreIcon6 = document.querySelector("#foreIcon6");
+        let foreIcon7 = document.querySelector("#foreIcon7");
 
         //background colors
-        let clearBlue = "#B3BFD2"; //highlights blue
-        let orangeH = "#E6A339"; //highlights orange
-        let clearDay = "#FFFEFA"; // clear sky
-        let clearNight = "#16223F"; // clear night
-        let cloudyDay = "#EFEEE7"; //few clouds day
-        let cloudyNight = "#282E3D"; // few clouds night
-        let scatDay = "#DBDBDB"; // scattered day
-        let scatNight = "#32405F"; // scattered night
-        let brokenDay = "#B7B5B5"; // broken day
-        let brokenNight = "#5D6D92"; // broken night
-        let showerDay = "#C8DDE9"; // shower day
+        let clearBlue = "#B3BFD2";
+        let orangeH = "#E6A339";
+        let clearDay = "#FFFEFA";
+        let clearNight = "#16223F";
+        let cloudyDay = "#EFEEE7";
+        let cloudyNight = "#282E3D";
+        let scatDay = "#DBDBDB";
+        let scatNight = "#32405F";
+        let brokenDay = "#B7B5B5";
+        let brokenNight = "#5D6D92";
+        let showerDay = "#C8DDE9";
         let showerNight = "#4A5161";
         let rainDay = "#97BACE";
         let rainNight = "#394152";
@@ -132,7 +159,6 @@ function changeCurrentGeo() {
         let mistDay = "#D6E1E4";
         let mistNight = "#8792AC";
 
-        //document.html.body.style.backgroundColor = clearNight;
         const root = document.querySelector(":root");
         let searchBar = document.querySelector("#city-input");
 
@@ -150,7 +176,6 @@ function changeCurrentGeo() {
           root.style.setProperty("--orange", orangeH);
         } else if (geoSky === `clear sky` && hour > 18) {
           todayIcon.setAttribute("src", "icons/clear-sky-night.svg");
-
           root.style.setProperty("--blue", clearNight);
           root.style.setProperty("--orange", clearBlue);
         }
@@ -293,13 +318,10 @@ function changeCurrentGeo() {
 
       axios.get(currentWeather).then(changeSky);
       //change humidity
-      function changeHumidity(response) {
-        let humidity = document.querySelector("#humidity");
-        let geoHumidity = response.data.daily[0].temperature.humidity;
+      let humidity = document.querySelector("#humidity");
+      let geoHumidity = response.data.daily[0].temperature.humidity;
 
-        humidity.textContent = geoHumidity;
-      }
-      axios.get(currentWeather).then(changeHumidity);
+      humidity.textContent = geoHumidity;
     }
 
     axios.get(currentWeather).then(changeLocation);
