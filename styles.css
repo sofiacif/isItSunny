@@ -117,7 +117,8 @@ h3 {
   display: block;
   margin: 4rem auto;
   margin-top: 6.5rem;
-  width: 30%;
+  width: 40%;
+  max-height: 200px;
 }
 .current-temp {
   font-weight: 600;
@@ -259,7 +260,7 @@ input[type="text"] {
   vertical-align: top;
 }
 #division {
-  color: #806256;
+  color: var(--orange);
   font-weight: 200;
   font-size: 0.3em;
   vertical-align: top;
