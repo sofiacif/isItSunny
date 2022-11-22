@@ -32,6 +32,7 @@ let day5 = document.querySelector("#day5");
 let day6 = document.querySelector("#day6");
 let day7 = document.querySelector("#day7");
 
+// change forecast weekdays
 day2.innerHTML = weekDays[now.getDay() + 1];
 day3.innerHTML = weekDays[now.getDay() + 2];
 day4.innerHTML = weekDays[now.getDay() + 3];
@@ -107,6 +108,28 @@ function changeCurrentGeo() {
       let minTemp = document.querySelector("#min-temp");
       let geoMin = Math.round(response.data.daily[0].temperature.minimum);
       minTemp.textContent = geoMin;
+
+      // forecast temp labels
+      let temp2 = document.querySelector("#temp2");
+      let temp3 = document.querySelector("#temp3");
+      let temp4 = document.querySelector("#temp4");
+      let temp5 = document.querySelector("#temp5");
+      let temp6 = document.querySelector("#temp6");
+      let temp7 = document.querySelector("#temp7");
+
+      //change forecast temp
+      temp2.innerHTML =
+        Math.round(response.data.daily[1].temperature.day) + "°C";
+      temp3.innerHTML =
+        Math.round(response.data.daily[2].temperature.day) + "°C";
+      temp4.innerHTML =
+        Math.round(response.data.daily[3].temperature.day) + "°C";
+      temp5.innerHTML =
+        Math.round(response.data.daily[4].temperature.day) + "°C";
+      temp6.innerHTML =
+        Math.round(response.data.daily[5].temperature.day) + "°C";
+      temp7.innerHTML =
+        Math.round(response.data.daily[6].temperature.day) + "°C";
 
       //change wind
       let wind = document.querySelector("#wind");
@@ -405,17 +428,17 @@ function changeTempSearch(event) {
       let todayIcon = document.querySelector(".today-icon");
 
       //background colors
-      let clearBlue = "#B3BFD2"; //highlights blue
-      let orangeH = "#ca6800"; //highlights orange
-      let clearDay = "#FFFEFA"; // clear sky
-      let clearNight = "#16223F"; // clear night
-      let cloudyDay = "#EFEEE7"; //few clouds day
-      let cloudyNight = "#282E3D"; // few clouds night
-      let scatDay = "#DBDBDB"; // scattered day
-      let scatNight = "#32405F"; // scattered night
-      let brokenDay = "#B7B5B5"; // broken day
-      let brokenNight = "#5D6D92"; // broken night
-      let showerDay = "#C8DDE9"; // shower day
+      let clearBlue = "#B3BFD2";
+      let orangeH = "#ca6800";
+      let clearDay = "#FFFEFA";
+      let clearNight = "#16223F";
+      let cloudyDay = "#EFEEE7";
+      let cloudyNight = "#282E3D";
+      let scatDay = "#DBDBDB";
+      let scatNight = "#32405F";
+      let brokenDay = "#B7B5B5";
+      let brokenNight = "#5D6D92";
+      let showerDay = "#C8DDE9";
       let showerNight = "#4A5161";
       let rainDay = "#97BACE";
       let rainNight = "#394152";
