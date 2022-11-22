@@ -187,11 +187,11 @@ function changeCurrentGeo() {
 
         // broken clouds icon
         if (geoSky === `broken clouds` && hour < 18) {
-          todayIcon.setAttribute("src", "icons/broken-clouds-day.svg");
+          todayIcon.setAttribute("src", "icons/broken-day.svg");
           root.style.setProperty("--blue", brokenDay);
           root.style.setProperty("--orange", clearDay);
         } else if (geoSky === `broken clouds` && hour > 18) {
-          todayIcon.setAttribute("src", "icons/broken-clouds-night.svg");
+          todayIcon.setAttribute("src", "icons/broken-night.svg");
           root.style.setProperty("--blue", brokenNight);
           root.style.setProperty("--orange", clearNight);
         }
@@ -259,15 +259,16 @@ function changeCurrentGeo() {
           root.style.setProperty("--orange", snowDay);
         }
         // snow icon
-        if (geoSky === `snow` && hour < 18) {
+        if (geoSky.includes("snow") && hour < 18) {
           todayIcon.setAttribute("src", "icons/snow-day.svg");
           root.style.setProperty("--blue", snowDay);
           root.style.setProperty("--orange", rainDay);
-        } else if (geoSky === `snow` && hour > 18) {
+        } else if (geoSky.includes("snow") && hour > 18) {
           todayIcon.setAttribute("src", "icons/snow-night.svg");
           root.style.setProperty("--blue", snowNight);
           root.style.setProperty("--orange", snowDay);
         }
+
         // mist icon
         if (geoSky === `mist` && hour < 18) {
           todayIcon.setAttribute("src", "icons/mist-day.svg");
@@ -458,11 +459,11 @@ function changeTempSearch(event) {
 
       // broken clouds icon
       if (geoSky === `broken clouds` && hour < 18) {
-        todayIcon.setAttribute("src", "icons/broken-clouds-day.svg");
+        todayIcon.setAttribute("src", "icons/broken-day.svg");
         root.style.setProperty("--blue", brokenDay);
         root.style.setProperty("--orange", clearDay);
       } else if (geoSky === `broken clouds` && hour > 18) {
-        todayIcon.setAttribute("src", "icons/broken-clouds-night.svg");
+        todayIcon.setAttribute("src", "icons/broken-night.svg");
         root.style.setProperty("--blue", brokenNight);
         root.style.setProperty("--orange", clearNight);
       }
@@ -530,11 +531,11 @@ function changeTempSearch(event) {
         root.style.setProperty("--orange", snowDay);
       }
       // snow icon
-      if (geoSky === `snow` && hour < 18) {
+      if (geoSky.includes("snow") && hour < 18) {
         todayIcon.setAttribute("src", "icons/snow-day.svg");
         root.style.setProperty("--blue", snowDay);
         root.style.setProperty("--orange", rainDay);
-      } else if (geoSky === `snow` && hour > 18) {
+      } else if (geoSky.includes("snow") && hour > 18) {
         todayIcon.setAttribute("src", "icons/snow-night.svg");
         root.style.setProperty("--blue", snowNight);
         root.style.setProperty("--orange", snowDay);
