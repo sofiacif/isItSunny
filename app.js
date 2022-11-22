@@ -187,10 +187,8 @@ function changeCurrentGeo() {
 
         if (hour < 18) {
           root.style.setProperty("--gray", cloudyNight);
-          searchBar.classList.add("clearNight");
         } else {
           root.style.setProperty("--gray", clearDay);
-          searchBar.classList.add("clearDay");
         }
         // clear sky icon
         if (geoSky === `clear sky` && hour < 18) {
