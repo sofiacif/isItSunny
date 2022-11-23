@@ -256,7 +256,7 @@ input[type="text"] {
   margin-top: -18px !important;
 }
 #farenheit,
-#celcius {
+#celsius {
   color: var(--orange);
   font-weight: 200;
   cursor: pointer;
