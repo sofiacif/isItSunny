@@ -234,6 +234,15 @@ input[type="text"] {
   display: flex;
   justify-content: center;
 }
+#foreIcon2,
+#foreIcon3,
+#foreIcon4,
+#foreIcon5,
+#foreIcon6,
+#foreIcon7 {
+  width: 40% !important;
+}
+
 #weekdays1,
 #weekdays2 {
   margin-top: 20px;
