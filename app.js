@@ -152,14 +152,23 @@ function changeCurrentGeo() {
         let foreSky6 = response.data.daily[5].condition.icon;
         let foreSky7 = response.data.daily[6].condition.icon;
 
+        // forecast icon variables
+        let todayIcon = document.getElementById("todayIcon");
+        let foreIcon2 = document.getElementById("foreIcon2");
+        let foreIcon3 = document.getElementById("foreIcon3");
+        let foreIcon4 = document.getElementById("foreIcon4");
+        let foreIcon5 = document.getElementById("foreIcon5");
+        let foreIcon6 = document.getElementById("foreIcon6");
+        let foreIcon7 = document.getElementById("foreIcon7");
+
         //change forecast icons
-        document.getElementById("todayIcon").src = `icons/${geoIcon}.svg`;
-        document.getElementById("foreIcon2").src = `icons/${foreSky2}.svg`;
-        document.getElementById("foreIcon3").src = `icons/${foreSky3}.svg`;
-        document.getElementById("foreIcon4").src = `icons/${foreSky4}.svg`;
-        document.getElementById("foreIcon5").src = `icons/${foreSky5}.svg`;
-        document.getElementById("foreIcon6").src = `icons/${foreSky6}.svg`;
-        document.getElementById("foreIcon7").src = `icons/${foreSky7}.svg`;
+        todayIcon.data = `icons/${geoIcon}.svg`;
+        foreIcon2.data = `icons/${foreSky2}.svg`;
+        foreIcon3.data = `icons/${foreSky3}.svg`;
+        foreIcon4.data = `icons/${foreSky4}.svg`;
+        foreIcon5.data = `icons/${foreSky5}.svg`;
+        foreIcon6.data = `icons/${foreSky6}.svg`;
+        foreIcon7.data = `icons/${foreSky7}.svg`;
 
         //background colors
         let clearBlue = "#B3BFD2";
@@ -377,13 +386,13 @@ function changeTempSearch(event) {
       let foreSky7 = response.data.daily[6].condition.icon;
 
       //change forecast icons
-      document.getElementById("todayIcon").src = `icons/${geoIcon}.svg`;
-      document.getElementById("foreIcon2").src = `icons/${foreSky2}.svg`;
-      document.getElementById("foreIcon3").src = `icons/${foreSky3}.svg`;
-      document.getElementById("foreIcon4").src = `icons/${foreSky4}.svg`;
-      document.getElementById("foreIcon5").src = `icons/${foreSky5}.svg`;
-      document.getElementById("foreIcon6").src = `icons/${foreSky6}.svg`;
-      document.getElementById("foreIcon7").src = `icons/${foreSky7}.svg`;
+      document.getElementById("todayIcon").data = `icons/${geoIcon}.svg`;
+      document.getElementById("foreIcon2").data = `icons/${foreSky2}.svg`;
+      document.getElementById("foreIcon3").data = `icons/${foreSky3}.svg`;
+      document.getElementById("foreIcon4").data = `icons/${foreSky4}.svg`;
+      document.getElementById("foreIcon5").data = `icons/${foreSky5}.svg`;
+      document.getElementById("foreIcon6").data = `icons/${foreSky6}.svg`;
+      document.getElementById("foreIcon7").data = `icons/${foreSky7}.svg`;
 
       //background colors
       let clearBlue = "#B3BFD2";
