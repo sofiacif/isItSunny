@@ -87,7 +87,7 @@ function changeCurrentGeo() {
       let farenheitConversion = currentTemp.textContent * 1.8 + 32;
 
       function changeFarenheit() {
-        currentTemp.textContent = geoTemp * 1.8 + 32;
+        currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
       }
 
       farenheit.addEventListener("click", changeFarenheit);
@@ -326,7 +326,7 @@ function changeTempSearch(event) {
     let farenheitConversion = currentTemp.textContent * 1.8 + 32;
 
     function changeFarenheit() {
-      currentTemp.textContent = geoTemp * 1.8 + 32;
+      currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
     }
 
     farenheit.addEventListener("click", changeFarenheit);
