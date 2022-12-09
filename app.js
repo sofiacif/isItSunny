@@ -62,6 +62,20 @@ let hour = now.getHours();
 let currentDate = document.querySelector("#current-day");
 currentDate.innerHTML = `${day} ${month}`;
 
+// change greeting (morning, afternoon, evening)
+let dayTime = document.querySelector("#daytime");
+
+if (hour > 5 && hour < 12) {
+  dayTime.innerHTML = "morning";
+} else if (hour >= 12 && hour < 17) {
+  dayTime.innerHTML = "afternoon";
+} else if (hour >= 17 && hour <= 24) {
+  dayTime.innerHTML = "evening";
+} else if (hour >= 0 && hour < 5) {
+  dayTime.innerHTML = "evening";
+}
+console.log(greeting);
+
 let currentCity = document.querySelector("#current-city"); //Good morning, current city
 let currentTemp = document.querySelector("#current-temp"); // temperature info
 
@@ -153,6 +167,7 @@ function changeCurrentGeo() {
         let foreSky7 = response.data.daily[6].condition.icon;
 
         //change forecast icons
+
         document.getElementById("todayIcon").src = `icons/${geoIcon}.svg`;
         document.getElementById("foreIcon2").src = `icons/${foreSky2}.svg`;
         document.getElementById("foreIcon3").src = `icons/${foreSky3}.svg`;
