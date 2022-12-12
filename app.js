@@ -74,7 +74,6 @@ if (hour > 5 && hour < 12) {
 } else if (hour >= 0 && hour < 5) {
   dayTime.innerHTML = "evening";
 }
-console.log(greeting);
 
 let currentCity = document.querySelector("#current-city"); //Good morning, current city
 let currentTemp = document.querySelector("#current-temp"); // temperature info
@@ -152,7 +151,7 @@ function changeCurrentGeo() {
 
       //change sky
       function changeSky(response) {
-        event.preventDefault();
+        //event.preventDefault();
         let sky = document.querySelector("#sky");
         let geoSky = response.data.daily[0].condition.description;
         sky.textContent = geoSky;
@@ -212,6 +211,24 @@ function changeCurrentGeo() {
         if (geoIcon === `clear-sky-day`) {
           root.style.setProperty("--blue", clearDay);
           root.style.setProperty("--orange", orangeH);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_orange.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_orange.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_orange.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_orange.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_orange.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_orange.svg`;
         }
         if (geoIcon === `clear-sky-night`) {
           root.style.setProperty("--blue", clearNight);
