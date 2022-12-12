@@ -233,81 +233,387 @@ function changeCurrentGeo() {
         if (geoIcon === `clear-sky-night`) {
           root.style.setProperty("--blue", clearNight);
           root.style.setProperty("--orange", clearBlue);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearblue.svg`;
         }
         // cloudy icon
         if (geoIcon === `few-clouds-day`) {
           root.style.setProperty("--blue", cloudyDay);
           root.style.setProperty("--orange", orangeH);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_orange.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_orange.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_orange.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_orange.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_orange.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_orange.svg`;
         }
         if (geoIcon === `few-clouds-night`) {
           root.style.setProperty("--blue", cloudyNight);
           root.style.setProperty("--orange", clearBlue);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearblue.svg`;
         }
         // scattered clouds icon
         if (geoIcon === `scattered-clouds-day`) {
           root.style.setProperty("--blue", scatDay);
           root.style.setProperty("--orange", scatNight);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_rainight.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_rainight.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_rainight.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_rainight.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_rainight.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_rainight.svg`;
         }
         if (geoIcon === `scattered-clouds-night`) {
           root.style.setProperty("--blue", scatNight);
           root.style.setProperty("--orange", clearBlue);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearblue.svg`;
         }
 
         // broken clouds icon
         if (geoIcon === `broken-clouds-day`) {
           root.style.setProperty("--blue", brokenDay);
           root.style.setProperty("--orange", clearDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
         if (geoIcon === `broken-clouds-night`) {
           root.style.setProperty("--blue", brokenNight);
           root.style.setProperty("--orange", clearNight);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearblue.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearblue.svg`;
         }
         // showers icon
         if (geoIcon === `shower-rain-day`) {
           root.style.setProperty("--blue", showerDay);
           root.style.setProperty("--orange", brokenNight);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_brokenight.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_brokenight.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_brokenight.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_brokenight.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_brokenight.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_brokenight.svg`;
         }
         if (geoIcon === `shower-rain-night`) {
           root.style.setProperty("--blue", showerNight);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
         // rain icon
         if (geoIcon === `rain-day`) {
           root.style.setProperty("--blue", rainDay);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
         if (geoIcon === `rain-night`) {
           root.style.setProperty("--blue", rainNight);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
 
         // thunder icon
         if (geoIcon === `thunderstorm-day`) {
           root.style.setProperty("--blue", thunderDay);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
         if (geoIcon === `thunderstorm-night`) {
           root.style.setProperty("--blue", thunderNight);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
         // snow icon
         if (geoIcon === `snow-day`) {
           root.style.setProperty("--blue", snowDay);
           root.style.setProperty("--orange", rainDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_rainday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_rainday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_rainday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_rainday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_rainday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_rainday.svg`;
         }
         if (geoIcon === `snow-night`) {
           root.style.setProperty("--blue", snowNight);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
 
         // mist icon
         if (geoIcon === `mist-day`) {
           root.style.setProperty("--blue", mistDay);
           root.style.setProperty("--orange", rainNight);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_rainight.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_rainight.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_rainight.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_rainight.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_rainight.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_rainight.svg`;
         }
         if (geoIcon === `mist-night`) {
           root.style.setProperty("--blue", mistNight);
           root.style.setProperty("--orange", snowDay);
+          document.getElementById(
+            "foreIcon2"
+          ).src = `icons/${foreSky2}_clearday.svg`;
+          document.getElementById(
+            "foreIcon3"
+          ).src = `icons/${foreSky3}_clearday.svg`;
+          document.getElementById(
+            "foreIcon4"
+          ).src = `icons/${foreSky4}_clearday.svg`;
+          document.getElementById(
+            "foreIcon5"
+          ).src = `icons/${foreSky5}_clearday.svg`;
+          document.getElementById(
+            "foreIcon6"
+          ).src = `icons/${foreSky6}_clearday.svg`;
+          document.getElementById(
+            "foreIcon7"
+          ).src = `icons/${foreSky7}_clearday.svg`;
         }
       }
 
@@ -394,7 +700,7 @@ function changeTempSearch(event) {
 
     //change sky
     function changeSky(response) {
-      event.preventDefault();
+      //event.preventDefault();
       let sky = document.querySelector("#sky");
       let geoSky = response.data.daily[0].condition.description;
       sky.textContent = geoSky;
@@ -409,6 +715,7 @@ function changeTempSearch(event) {
       let foreSky7 = response.data.daily[6].condition.icon;
 
       //change forecast icons
+
       document.getElementById("todayIcon").src = `icons/${geoIcon}.svg`;
       document.getElementById("foreIcon2").src = `icons/${foreSky2}.svg`;
       document.getElementById("foreIcon3").src = `icons/${foreSky3}.svg`;
@@ -453,85 +760,409 @@ function changeTempSearch(event) {
       if (geoIcon === `clear-sky-day`) {
         root.style.setProperty("--blue", clearDay);
         root.style.setProperty("--orange", orangeH);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_orange.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_orange.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_orange.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_orange.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_orange.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_orange.svg`;
       }
       if (geoIcon === `clear-sky-night`) {
         root.style.setProperty("--blue", clearNight);
         root.style.setProperty("--orange", clearBlue);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearblue.svg`;
       }
       // cloudy icon
       if (geoIcon === `few-clouds-day`) {
         root.style.setProperty("--blue", cloudyDay);
         root.style.setProperty("--orange", orangeH);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_orange.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_orange.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_orange.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_orange.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_orange.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_orange.svg`;
       }
       if (geoIcon === `few-clouds-night`) {
         root.style.setProperty("--blue", cloudyNight);
         root.style.setProperty("--orange", clearBlue);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearblue.svg`;
       }
       // scattered clouds icon
       if (geoIcon === `scattered-clouds-day`) {
         root.style.setProperty("--blue", scatDay);
         root.style.setProperty("--orange", scatNight);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_rainight.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_rainight.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_rainight.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_rainight.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_rainight.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_rainight.svg`;
       }
       if (geoIcon === `scattered-clouds-night`) {
         root.style.setProperty("--blue", scatNight);
         root.style.setProperty("--orange", clearBlue);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearblue.svg`;
       }
 
       // broken clouds icon
       if (geoIcon === `broken-clouds-day`) {
         root.style.setProperty("--blue", brokenDay);
         root.style.setProperty("--orange", clearDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
       if (geoIcon === `broken-clouds-night`) {
         root.style.setProperty("--blue", brokenNight);
         root.style.setProperty("--orange", clearNight);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearblue.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearblue.svg`;
       }
       // showers icon
       if (geoIcon === `shower-rain-day`) {
         root.style.setProperty("--blue", showerDay);
         root.style.setProperty("--orange", brokenNight);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_brokenight.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_brokenight.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_brokenight.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_brokenight.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_brokenight.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_brokenight.svg`;
       }
       if (geoIcon === `shower-rain-night`) {
         root.style.setProperty("--blue", showerNight);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
       // rain icon
       if (geoIcon === `rain-day`) {
         root.style.setProperty("--blue", rainDay);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
       if (geoIcon === `rain-night`) {
         root.style.setProperty("--blue", rainNight);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
 
       // thunder icon
       if (geoIcon === `thunderstorm-day`) {
         root.style.setProperty("--blue", thunderDay);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
       if (geoIcon === `thunderstorm-night`) {
         root.style.setProperty("--blue", thunderNight);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
       // snow icon
       if (geoIcon === `snow-day`) {
         root.style.setProperty("--blue", snowDay);
         root.style.setProperty("--orange", rainDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_rainday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_rainday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_rainday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_rainday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_rainday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_rainday.svg`;
       }
       if (geoIcon === `snow-night`) {
         root.style.setProperty("--blue", snowNight);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
 
       // mist icon
       if (geoIcon === `mist-day`) {
         root.style.setProperty("--blue", mistDay);
         root.style.setProperty("--orange", rainNight);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_rainight.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_rainight.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_rainight.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_rainight.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_rainight.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_rainight.svg`;
       }
       if (geoIcon === `mist-night`) {
         root.style.setProperty("--blue", mistNight);
         root.style.setProperty("--orange", snowDay);
+        document.getElementById(
+          "foreIcon2"
+        ).src = `icons/${foreSky2}_clearday.svg`;
+        document.getElementById(
+          "foreIcon3"
+        ).src = `icons/${foreSky3}_clearday.svg`;
+        document.getElementById(
+          "foreIcon4"
+        ).src = `icons/${foreSky4}_clearday.svg`;
+        document.getElementById(
+          "foreIcon5"
+        ).src = `icons/${foreSky5}_clearday.svg`;
+        document.getElementById(
+          "foreIcon6"
+        ).src = `icons/${foreSky6}_clearday.svg`;
+        document.getElementById(
+          "foreIcon7"
+        ).src = `icons/${foreSky7}_clearday.svg`;
       }
     }
 
