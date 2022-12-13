@@ -102,6 +102,18 @@ function changeCurrentGeo() {
 
       function changeFarenheit() {
         currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
+        temp2.innerHTML =
+          Math.round(response.data.daily[1].temperature.day * 1.8 + 32) + "°F";
+        temp3.innerHTML =
+          Math.round(response.data.daily[2].temperature.day * 1.8 + 32) + "°F";
+        temp4.innerHTML =
+          Math.round(response.data.daily[3].temperature.day * 1.8 + 32) + "°F";
+        temp5.innerHTML =
+          Math.round(response.data.daily[4].temperature.day * 1.8 + 32) + "°F";
+        temp6.innerHTML =
+          Math.round(response.data.daily[5].temperature.day * 1.8 + 32) + "°F";
+        temp7.innerHTML =
+          Math.round(response.data.daily[6].temperature.day * 1.8 + 32) + "°F";
       }
 
       farenheit.addEventListener("click", changeFarenheit);
@@ -112,6 +124,18 @@ function changeCurrentGeo() {
         currentTemp.textContent = Math.round(
           response.data.daily[0].temperature.day
         );
+        temp2.innerHTML =
+          Math.round(response.data.daily[1].temperature.day) + "°C";
+        temp3.innerHTML =
+          Math.round(response.data.daily[2].temperature.day) + "°C";
+        temp4.innerHTML =
+          Math.round(response.data.daily[3].temperature.day) + "°C";
+        temp5.innerHTML =
+          Math.round(response.data.daily[4].temperature.day) + "°C";
+        temp6.innerHTML =
+          Math.round(response.data.daily[5].temperature.day) + "°C";
+        temp7.innerHTML =
+          Math.round(response.data.daily[6].temperature.day) + "°C";
       }
 
       celsius.addEventListener("click", changecelsius);
@@ -656,9 +680,20 @@ function changeTempSearch(event) {
     let farenheit = document.querySelector("#farenheit");
     let celsius = document.querySelector("#celsius");
     let farenheitConversion = Math.round(currentTemp.textContent * 1.8 + 32);
-
     function changeFarenheit() {
       currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
+      temp2.innerHTML =
+        Math.round(response.data.daily[1].temperature.day * 1.8 + 32) + "°F";
+      temp3.innerHTML =
+        Math.round(response.data.daily[2].temperature.day * 1.8 + 32) + "°F";
+      temp4.innerHTML =
+        Math.round(response.data.daily[3].temperature.day * 1.8 + 32) + "°F";
+      temp5.innerHTML =
+        Math.round(response.data.daily[4].temperature.day * 1.8 + 32) + "°F";
+      temp6.innerHTML =
+        Math.round(response.data.daily[5].temperature.day * 1.8 + 32) + "°F";
+      temp7.innerHTML =
+        Math.round(response.data.daily[6].temperature.day * 1.8 + 32) + "°F";
     }
 
     farenheit.addEventListener("click", changeFarenheit);
@@ -669,8 +704,19 @@ function changeTempSearch(event) {
       currentTemp.textContent = Math.round(
         response.data.daily[0].temperature.day
       );
+      temp2.innerHTML =
+        Math.round(response.data.daily[1].temperature.day) + "°C";
+      temp3.innerHTML =
+        Math.round(response.data.daily[2].temperature.day) + "°C";
+      temp4.innerHTML =
+        Math.round(response.data.daily[3].temperature.day) + "°C";
+      temp5.innerHTML =
+        Math.round(response.data.daily[4].temperature.day) + "°C";
+      temp6.innerHTML =
+        Math.round(response.data.daily[5].temperature.day) + "°C";
+      temp7.innerHTML =
+        Math.round(response.data.daily[6].temperature.day) + "°C";
     }
-
     celsius.addEventListener("click", changecelsius);
 
     //change max and min temp
