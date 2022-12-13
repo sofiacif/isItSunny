@@ -95,12 +95,25 @@ function changeCurrentGeo() {
     function changeTemperature(response) {
       let geoTemp = Math.round(response.data.daily[0].temperature.day);
       currentTemp.textContent = geoTemp;
+
       let farenheit = document.querySelector("#farenheit");
       let celsius = document.querySelector("#celsius");
-      let farenheitConversion = currentTemp.textContent * 1.8 + 32;
+      let farenheitConversion = Math.round(currentTemp.textContent * 1.8 + 32);
 
       function changeFarenheit() {
-        currentTemp.textContent = geoTemp * 1.8 + 32;
+        currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
+        temp2.innerHTML =
+          Math.round(response.data.daily[1].temperature.day * 1.8 + 32) + "°F";
+        temp3.innerHTML =
+          Math.round(response.data.daily[2].temperature.day * 1.8 + 32) + "°F";
+        temp4.innerHTML =
+          Math.round(response.data.daily[3].temperature.day * 1.8 + 32) + "°F";
+        temp5.innerHTML =
+          Math.round(response.data.daily[4].temperature.day * 1.8 + 32) + "°F";
+        temp6.innerHTML =
+          Math.round(response.data.daily[5].temperature.day * 1.8 + 32) + "°F";
+        temp7.innerHTML =
+          Math.round(response.data.daily[6].temperature.day * 1.8 + 32) + "°F";
       }
 
       farenheit.addEventListener("click", changeFarenheit);
@@ -108,7 +121,21 @@ function changeCurrentGeo() {
       console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
       function changecelsius() {
-        currentTemp.textContent = Math.round(response.data.temperature.current);
+        currentTemp.textContent = Math.round(
+          response.data.daily[0].temperature.day
+        );
+        temp2.innerHTML =
+          Math.round(response.data.daily[1].temperature.day) + "°C";
+        temp3.innerHTML =
+          Math.round(response.data.daily[2].temperature.day) + "°C";
+        temp4.innerHTML =
+          Math.round(response.data.daily[3].temperature.day) + "°C";
+        temp5.innerHTML =
+          Math.round(response.data.daily[4].temperature.day) + "°C";
+        temp6.innerHTML =
+          Math.round(response.data.daily[5].temperature.day) + "°C";
+        temp7.innerHTML =
+          Math.round(response.data.daily[6].temperature.day) + "°C";
       }
 
       celsius.addEventListener("click", changecelsius);
@@ -632,7 +659,7 @@ function changeCurrentGeo() {
 }
 let currentGeo = document.querySelector("#currentgeo");
 currentGeo.addEventListener("click", changeCurrentGeo);
-
+changeCurrentGeo();
 //change temperature, search
 let newCity = document.querySelector("#new-city"); //form, submit the answer
 let cityInput = document.querySelector("#city-input"); //text search box
@@ -652,10 +679,21 @@ function changeTempSearch(event) {
     currentTemp.textContent = geoTemp;
     let farenheit = document.querySelector("#farenheit");
     let celsius = document.querySelector("#celsius");
-    let farenheitConversion = currentTemp.textContent * 1.8 + 32;
-
+    let farenheitConversion = Math.round(currentTemp.textContent * 1.8 + 32);
     function changeFarenheit() {
-      currentTemp.textContent = geoTemp * 1.8 + 32;
+      currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
+      temp2.innerHTML =
+        Math.round(response.data.daily[1].temperature.day * 1.8 + 32) + "°F";
+      temp3.innerHTML =
+        Math.round(response.data.daily[2].temperature.day * 1.8 + 32) + "°F";
+      temp4.innerHTML =
+        Math.round(response.data.daily[3].temperature.day * 1.8 + 32) + "°F";
+      temp5.innerHTML =
+        Math.round(response.data.daily[4].temperature.day * 1.8 + 32) + "°F";
+      temp6.innerHTML =
+        Math.round(response.data.daily[5].temperature.day * 1.8 + 32) + "°F";
+      temp7.innerHTML =
+        Math.round(response.data.daily[6].temperature.day * 1.8 + 32) + "°F";
     }
 
     farenheit.addEventListener("click", changeFarenheit);
@@ -663,9 +701,22 @@ function changeTempSearch(event) {
     console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
     function changecelsius() {
-      currentTemp.textContent = Math.round(response.data.temperature.current);
+      currentTemp.textContent = Math.round(
+        response.data.daily[0].temperature.day
+      );
+      temp2.innerHTML =
+        Math.round(response.data.daily[1].temperature.day) + "°C";
+      temp3.innerHTML =
+        Math.round(response.data.daily[2].temperature.day) + "°C";
+      temp4.innerHTML =
+        Math.round(response.data.daily[3].temperature.day) + "°C";
+      temp5.innerHTML =
+        Math.round(response.data.daily[4].temperature.day) + "°C";
+      temp6.innerHTML =
+        Math.round(response.data.daily[5].temperature.day) + "°C";
+      temp7.innerHTML =
+        Math.round(response.data.daily[6].temperature.day) + "°C";
     }
-
     celsius.addEventListener("click", changecelsius);
 
     //change max and min temp
