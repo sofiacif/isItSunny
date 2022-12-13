@@ -19,22 +19,22 @@
     margin-top: 50px !important;
   }
 
-  #light-mode {
+  /*#light-mode {
     position: absolute;
     top: -3%;
     right: 0%;
-  }
+  }*/
   .search-row {
     margin-top: 30% !important;
   }
 }
 /* tablet */
 @media (min-width: 765px) and (max-width: 1201px) {
-  #light-mode {
+  /* #light-mode {
     position: absolute;
     top: -9%;
     right: -6%;
-  }
+  }*/
   .greeting {
     margin-top: 20% !important;
     margin-left: 20%;
@@ -164,7 +164,7 @@ h3 {
 #top-info {
   margin-bottom: -10px;
 }
-.light-switch {
+/*.light-switch {
   text-align: right;
 }
 
@@ -177,7 +177,7 @@ h3 {
     hue-rotate(126deg) brightness(90%) contrast(91%);
   cursor: pointer !important;
 }
-
+*/
 .search {
   width: 100%;
   background: transparent;
