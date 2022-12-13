@@ -1,4 +1,4 @@
-# Is it sunny?
+# Is It Sunny?
 weather app
 
 You can check the website here: [Is It Sunny?](https://isitsunnytoday.netlify.app/)
