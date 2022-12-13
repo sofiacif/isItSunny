@@ -95,12 +95,13 @@ function changeCurrentGeo() {
     function changeTemperature(response) {
       let geoTemp = Math.round(response.data.daily[0].temperature.day);
       currentTemp.textContent = geoTemp;
+
       let farenheit = document.querySelector("#farenheit");
       let celsius = document.querySelector("#celsius");
-      let farenheitConversion = currentTemp.textContent * 1.8 + 32;
+      let farenheitConversion = Math.round(currentTemp.textContent * 1.8 + 32);
 
       function changeFarenheit() {
-        currentTemp.textContent = geoTemp * 1.8 + 32;
+        currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
       }
 
       farenheit.addEventListener("click", changeFarenheit);
@@ -108,7 +109,9 @@ function changeCurrentGeo() {
       console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
       function changecelsius() {
-        currentTemp.textContent = Math.round(response.data.temperature.current);
+        currentTemp.textContent = Math.round(
+          response.data.daily[0].temperature.day
+        );
       }
 
       celsius.addEventListener("click", changecelsius);
@@ -652,10 +655,10 @@ function changeTempSearch(event) {
     currentTemp.textContent = geoTemp;
     let farenheit = document.querySelector("#farenheit");
     let celsius = document.querySelector("#celsius");
-    let farenheitConversion = currentTemp.textContent * 1.8 + 32;
+    let farenheitConversion = Math.round(currentTemp.textContent * 1.8 + 32);
 
     function changeFarenheit() {
-      currentTemp.textContent = geoTemp * 1.8 + 32;
+      currentTemp.textContent = Math.round(geoTemp * 1.8 + 32);
     }
 
     farenheit.addEventListener("click", changeFarenheit);
@@ -663,7 +666,9 @@ function changeTempSearch(event) {
     console.log(`${currentTemp.textContent}°C ${farenheitConversion}°F`);
 
     function changecelsius() {
-      currentTemp.textContent = Math.round(response.data.temperature.current);
+      currentTemp.textContent = Math.round(
+        response.data.daily[0].temperature.day
+      );
     }
 
     celsius.addEventListener("click", changecelsius);
