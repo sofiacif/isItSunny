@@ -632,7 +632,7 @@ function changeCurrentGeo() {
 }
 let currentGeo = document.querySelector("#currentgeo");
 currentGeo.addEventListener("click", changeCurrentGeo);
-
+changeCurrentGeo();
 //change temperature, search
 let newCity = document.querySelector("#new-city"); //form, submit the answer
 let cityInput = document.querySelector("#city-input"); //text search box
